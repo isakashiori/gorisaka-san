@@ -1,4 +1,11 @@
-p 
-  | お金を返すのを忘れるのお知らせゴリラ
-  br
-  | 新規登録から始める方はこちら
+div.flex
+  div.pl-40.mt-40.w-2/3
+    h1.text-4xl.font-bold.pb-10
+      | 返金を催促するゴリラです
+      br
+    p.pb-10.w-2/3
+      | 「貸したお金をいつ返してくれるのか？」不安なあなたへ、あなたの代わりにゴリラが貸した相手に催促メールを送ります
+    = link_to '新規登録', new_user_path, class: 'py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-blue-500 hover:to-cyan-500 text-white px-5 rounded-lg drop-shadow-lg'
+  div.pl-40.mt-40
+    p
+      | 画像

@@ -1,0 +1,9 @@
+= link_to root_path do 
+  = image_tag 'logo.png'
+ul 
+  li 
+    = link_to 'アプリについて', '#'
+  li 
+    = link_to 'マイページ', '#'
+  li 
+    = button_to 'ログアウト', logout_path, method: :delete

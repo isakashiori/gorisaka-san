@@ -1,0 +1,8 @@
+header.p-4
+  nav.flex.justify-between.mx-auto.container.items-center
+    div
+      = link_to root_path do 
+        = image_tag 'logo.png'
+    div.space-x-12.font-bold
+      = link_to 'アプリについて', '#', class: 'hover:text-sky-600 transition-all duration-300'
+      = link_to 'ログイン', login_path, class: 'hover:text-sky-600 transition-all duration-300'
