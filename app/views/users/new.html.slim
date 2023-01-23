@@ -1,0 +1,13 @@
+p.text-3xl.text-center.font-bold
+  | 新規登録 
+  br
+= form_with model: @user, local: true do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :email
+  = f.text_field :email
+  = f.label :password
+  = f.text_field :password
+  = f.label :password_confirmation
+  = f.text_field :password_confirmation
+  = f.submit :登録

@@ -1,0 +1,9 @@
+p.text-3xl.text-center.font-bold
+  | ログイン
+  br
+= form_with url: login_path, local: true do |f|
+  = f.label :email
+  = f.text_field :email
+  = f.label :password
+  = f.text_field :password
+  = f.submit :ログイン
