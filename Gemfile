@@ -34,6 +34,10 @@ gem "sorcery"
 
 gem 'slim-rails'
 
+gem 'dotenv-rails'
+
+gem 'line-bot-api'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
