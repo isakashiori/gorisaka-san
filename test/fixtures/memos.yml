@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  borrower_name: MyString
+  money_amount: 1
+  repayment_day: MyString
+  lended_day: MyString
+  notes: MyString
+  user: one
+
+two:
+  borrower_name: MyString
+  money_amount: 1
+  repayment_day: MyString
+  lended_day: MyString
+  notes: MyString
+  user: two
