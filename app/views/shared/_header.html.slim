@@ -1,9 +1,9 @@
-= link_to root_path do 
-  = image_tag 'logo.png'
-ul 
-  li 
-    = link_to 'アプリについて', '#'
-  li 
-    = link_to 'マイページ', '#'
-  li 
-    = button_to 'ログアウト', logout_path, method: :delete
+header.p-4
+  nav.flex.justify-between.mx-auto.container.items-center
+    div
+      = link_to root_path do 
+        = image_tag 'logo.png'
+    div.space-x-12.font-bold 
+      = link_to 'アプリについて', about_path, class: 'hover:text-sky-600 transition-all duration-300'
+      = link_to 'マイページ', '#', class: 'hover:text-sky-600 transition-all duration-300'
+      = button_to 'ログアウト', logout_path, method: :delete, class: 'hover:text-sky-600 transition-all duration-300'
