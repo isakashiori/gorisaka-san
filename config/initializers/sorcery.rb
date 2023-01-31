@@ -81,7 +81,7 @@ Rails.application.config.sorcery.configure do |config|
   # Default: `[]`
   #
   #config.external_providers =[]
-
+gem 'simple_calendar'
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
   # Path to ca_file. By default use a internal ca-bundle.crt.
   # Default: `'path/to/ca_file'`
