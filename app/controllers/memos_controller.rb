@@ -12,6 +12,18 @@ class MemosController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
+  def update
+
+  end
+
+  def update
+    
+  end
+
   private
 
   def memo_params
