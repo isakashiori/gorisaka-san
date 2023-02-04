@@ -4,10 +4,12 @@ class MemosController < ApplicationController
   def index
     @memos = Memo.all.includes(:user).order(created_at: :desc)
   end
-  
-  def new 
-    @memo = Memo.new
+
+  def new
+    @memo =  Memo.new(memo_params)
   end
+  
+  def edit; end
 
   def show; end
 
@@ -31,6 +33,6 @@ class MemosController < ApplicationController
   end
 
   def set_memo
-    @memo = current_user.find(params[:id])
+    @memo = current_user.memos.find(params[:id])
   end
 end
