@@ -9,6 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      inset: {
+        "100": "30rem",
+        "115": "38rem",
+        "110": "31rem"
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
