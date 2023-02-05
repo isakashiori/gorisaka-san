@@ -6,7 +6,16 @@ class MemosController < ApplicationController
   end
 
   def new
-    @memo =  Memo.new(memo_params)
+    @memo =  Memo.new
+  end
+
+  def create
+    @memo = Memo.new(memo_params)
+    if @memo.save
+      rediect_to memos_path
+    else
+      render :new
+    end
   end
   
   def edit; end
