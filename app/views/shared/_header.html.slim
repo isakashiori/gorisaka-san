@@ -3,7 +3,7 @@ header.p-4
     div
       = link_to root_path do 
         = image_tag 'logo.png'
-    div.space-x-12.font-bold 
-      = link_to 'アプリについて', about_path, class: 'hover:text-sky-600 transition-all duration-300'
-      = link_to 'マイページ', '#', class: 'hover:text-sky-600 transition-all duration-300'
-      = button_to 'ログアウト', logout_path, method: :delete, class: 'hover:text-sky-600 transition-all duration-300'
+    div.md: ml-auto.flex.flex-wrap.items-center.text-base.justify-center
+      = link_to 'アプリについて', about_path, class: 'mr-5 hover:text-sky-600 transition-all duration-300'
+      = link_to 'マイページ', '#', class: 'mr-5 hover:text-sky-600 transition-all duration-300'
+      = button_to 'ログアウト', logout_path, method: :delete, class: 'mr-5 hover:text-sky-600 transition-all duration-300'
