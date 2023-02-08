@@ -1,0 +1,18 @@
+= form_with model: memo, local: true do |f|
+  div
+    = f.label :borrower_name
+    = f.text_field :borrower_name
+  div
+    = f.label :money_amount
+    = f.text_field :money_amount
+  div
+    = f.label :lended_day
+    = f.text_field :lended_day
+  div 
+    = f.label :repayment_day
+    = f.text_field :repayment_day
+  div
+    = f.label :notes
+    = f.text_field :notes
+  
+  = f.submit :更新

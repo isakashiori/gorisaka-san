@@ -1,13 +1,1 @@
-= form_with model: @memo, local: true do |f|
-  = f.label :borrower_name
-  = f.text_field :borrower_name
-  = f.label :money_amount
-  = f.text_field :money_amount
-  = f.label :lended_day
-  = f.text_field :lended_day
-  = f.label :repayment_day
-  = f.text_field :repayment_day
-  = f.label :notes
-  = f.text_field :notes
-  = f.submit :更新
-  
+= render 'form', { memo: @memo }

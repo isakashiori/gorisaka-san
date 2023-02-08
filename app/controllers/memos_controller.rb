@@ -1,9 +1,5 @@
 class MemosController < ApplicationController
-  before_action :set_memo, only: %i[show update destroy]
-
-  def index
-    @memos = Memo.all.includes(:user).order(created_at: :desc)
-  end
+  before_action :set_memo, only: %i[show edit update destroy]
 
   def new
     @memo =  Memo.new
@@ -17,10 +13,12 @@ class MemosController < ApplicationController
       render :new
     end
   end
+
+  def index
+    @memos = current_user.memos.all.includes(:user).order(created_at: :desc)
+  end
   
   def edit; end
-
-  def show; end
 
   def update
     if @memo.update(memo_params)
