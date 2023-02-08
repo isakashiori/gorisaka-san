@@ -40,7 +40,8 @@ gem 'line-bot-api'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
-
+gem 'pry-rails'
+gem 'pry-nav'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

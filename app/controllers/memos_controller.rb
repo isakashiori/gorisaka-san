@@ -6,23 +6,23 @@ class MemosController < ApplicationController
   end
 
   def create
-    @memo = Memo.new(memo_params)
+    @memo = current_user.memos.build(memo_params)
     if @memo.save
-      rediect_to memos_path
+      redirect_to memos_path
     else
       render :new
     end
   end
 
   def index
-    @memos = current_user.memos.all.includes(:user).order(created_at: :desc)
+    @memos = Memo.all.includes(:user).order(created_at: :desc)
   end
   
   def edit; end
 
   def update
     if @memo.update(memo_params)
-      rediect_to memos_path
+      redirect_to memos_path
     else
       render :new
     end
@@ -30,7 +30,7 @@ class MemosController < ApplicationController
 
   def destroy
     @memo.destroy!
-    rediect_to memos_path
+    redirect_to memos_path
   end
 
   private
