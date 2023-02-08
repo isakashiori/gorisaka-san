@@ -1,18 +1,18 @@
 = form_with model: memo, local: true do |f|
   div
-    = f.label :borrower_name
+    = f.label :borrower_name, "借りた人の名前"
     = f.text_field :borrower_name
   div
-    = f.label :money_amount
+    = f.label :money_amount, "借りた金額の合計"
     = f.text_field :money_amount
   div
-    = f.label :lended_day
+    = f.label :lended_day, "借りた日"
     = f.text_field :lended_day
   div 
-    = f.label :repayment_day
+    = f.label :repayment_day, "返金予定日"
     = f.text_field :repayment_day
   div
-    = f.label :notes
+    = f.label :notes, "備考"
     = f.text_field :notes
   
   = f.submit :更新

@@ -4,16 +4,16 @@ p.text-3xl.text-center.font-bold
 = form_with model: @user, local: true do |f|
   ul 
     li
-      = f.label :name
+      = f.label :name, "名前"
       = f.text_field :name
     li
-      = f.label :email
+      = f.label :email, "メールアドレス"
       = f.text_field :email
     li
-      = f.label :password
+      = f.label :password, "パスワード"
       = f.text_field :password
     li
-      = f.label :password_confirmation
+      = f.label :password_confirmation, "確認用パスワード"
       = f.text_field :password_confirmation
     li
       = f.submit :登録
