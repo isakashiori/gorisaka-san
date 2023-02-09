@@ -1,12 +1,19 @@
-table.table-auto
-  thead
-    tr
-      th 貸した人
-      th 貸した金額
-      th 貸した日
-      th 返金予定日
-    tr 
-      td = memo.borrower_name
-      td = memo.money_amount
-      td = memo.lended_day
-      td = memo.repayment_day
+tbody.text-gray-600.text-sm.font-light
+  tr.border-b.border-gray-200.hover:bg-gray-100
+    td.py-3.px-6.text-left.whitespace-nowrap
+      div.flex.items-center
+        span.font-medium
+          = memo.borrower_name
+    td.py-3.px-6.text-left
+      div.flex.items-center
+        span
+          = memo.money_amount
+    td.py-3.px-6.text-center
+      div.flex.items-center.justify-center
+        = memo.lended_day
+    td.py-3.px-6.text-center
+      div.flex.items-center.justify-center
+        = memo.repayment_day
+    td.py-3.px-6.text-center
+      div.flex.item-center.justify-center
+        = link_to '詳細', memo_path(memo)
