@@ -4,8 +4,10 @@ div.flex.relative
       | 返金を催促するゴリラです
       br
     p.pb-10.w-2/3
-      | 「貸したお金をいつ返してくれるのか？」不安なあなたへ、あなたの代わりにゴリラが貸した相手に催促メールを送ります
+      | 「貸したお金をいつ返してくれるのか？」不安なあなたへ、あなたの代わりにゴリラが貸した相手に催促メールを送ります(実装予定)
     = link_to '新規登録', new_user_path, class: 'py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-yellow-300 hover:to-rose-500 text-white px-5 rounded-lg drop-shadow-lg'
+    - if logged_in?
+      = link_to 'お金を管理', new_memo_path, class: 'ml-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-yellow-300 hover:to-rose-500 text-white px-5 rounded-lg drop-shadow-lg' 
   div.pl-30.mt-40
     = image_tag 'gorilla.png'
   div.absolute.top-10.right-96

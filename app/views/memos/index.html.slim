@@ -1,1 +1,16 @@
-h1 index
+div.overflow-x-auto
+  div.min-w-screen.min-h-screen.bg-gray-100.flex.items-center.justify-center.bg-gray-100.font-sans.overflow-hidden
+    div.w-full.lg:w-5/6
+      div.bg-white.shadow-md.rounded.my-6
+        table.min-w-max.w-full.table-auto
+          thead
+            tr.bg-gray-200.text-gray-600.uppercase.text-sm.leading-normal
+              th.py-3.px-6.text-left 貸した人
+              th.py-3.px-6.text-left 貸した金額
+              th.py-3.px-6.text-center 貸した日
+              th.py-3.px-6.text-center 返金予定日
+              th.py-3.px-6.text-center 詳細
+              - if @memos.present?
+                = render @memos
+              -else
+                p 投稿がありません

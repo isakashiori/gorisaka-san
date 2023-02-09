@@ -15,7 +15,7 @@ class MemosController < ApplicationController
   end
 
   def index
-    @memos = Memo.all.includes(:user).order(created_at: :desc)
+    @memos = current_user.memos.includes(:user).order(created_at: :desc)
   end
   
   def edit; end
