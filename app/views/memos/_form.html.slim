@@ -1,18 +1,22 @@
-= form_with model: memo do |f|
-  div
-    = f.label :borrower_name, "借りた人の名前"
-    = f.text_field :borrower_name
-  div
-    = f.label :money_amount, "借りた金額の合計"
-    = f.text_field :money_amount
-  div
-    = f.label :lended_day, "借りた日"
-    = f.text_field :lended_day
-  div 
-    = f.label :repayment_day, "返金予定日"
-    = f.text_field :repayment_day
-  div
-    = f.label :notes, "備考"
-    = f.text_field :notes
-  
-  = f.submit :更新
+div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.w-1/2.my-52
+  = form_with model: memo do |f|
+    div.flex.justify-between.m-7.items-center
+      = f.label :borrower_name, "借りた人の名前"
+      = f.text_field :borrower_name
+    div.flex.justify-between.m-7.items-center
+      = f.label :money_amount, "借りた金額の合計"
+      = f.text_field :money_amount
+    div.flex.justify-between.m-7.items-center
+      = f.label :lended_day, "借りた日"
+      = f.text_field :lended_day
+    div.flex.justify-between.m-7.items-center
+      = f.label :repayment_day, "返金予定日"
+      = f.text_field :repayment_day
+    div.flex.justify-between.m-7.items-center
+      = f.label :notes, "備考"
+      = f.text_area :notes
+    div.flex.justify-end
+      = f.submit :更新
+      -if params[:id] != nil
+        = link_to '削除', memo_path(memo), data: { turbo_method: delete }
+      
