@@ -8,10 +8,10 @@ div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.w-1/2.my-52
       = f.text_field :money_amount
     div.flex.justify-between.m-7.items-center
       = f.label :lended_day, "借りた日"
-      = f.text_field :lended_day
+      = f.date_field :lended_day
     div.flex.justify-between.m-7.items-center
       = f.label :repayment_day, "返金予定日"
-      = f.text_field :repayment_day
+      = f.date_field :repayment_day
     div.flex.justify-between.m-7.items-center
       = f.label :notes, "備考"
       = f.text_area :notes
