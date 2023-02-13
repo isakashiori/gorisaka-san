@@ -1,22 +1,22 @@
-div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.w-1/2.my-52
+div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.flex.justify-center
   = form_with model: memo do |f|
-    div.flex.justify-between.m-7.items-center
-      = f.label :borrower_name, "借した人の名前"
-      = f.text_field :borrower_name
-    div.flex.justify-between.m-7.items-center
-      = f.label :money_amount, "借した金額の合計"
-      = f.text_field :money_amount
-    div.flex.justify-between.m-7.items-center
-      = f.label :lended_day, "借した日"
-      = f.date_field :lended_day
-    div.flex.justify-between.m-7.items-center
-      = f.label :repayment_day, "返金予定日"
-      = f.date_field :repayment_day
-    div.flex.justify-between.m-7.items-center
-      = f.label :notes, "備考"
-      = f.text_area :notes
-    div.flex.justify-end
-      = f.submit :更新, class: 'm-3 py-2 px-3 bg-gradient-to-r from-teal-400 to-lime-400 rounded-lg text-white hover:text-green-500 cursor-pointer transition-all duration-400'
-      -if params[:id] != nil
-        = button_to '削除する', memo_path(memo), form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete, class: 'm-3 py-2 px-3 bg-gradient-to-r from-orange-400 to-rose-400 rounded-lg text-white hover:text-red-500 cursor-pointer transition-all duration-400'
-      
+    div.px-4
+      div.flex.justify-between.m-7.items-center
+        = f.label :borrower_name, "借した人の名前"
+        = f.text_field :borrower_name
+      div.flex.justify-between.m-7.items-center
+        = f.label :money_amount, "借した金額の合計"
+        = f.text_field :money_amount
+      div.flex.justify-between.m-7.items-center
+        = f.label :lended_day, "借した日"
+        = f.date_field :lended_day
+      div.flex.justify-between.m-7.items-center
+        = f.label :repayment_day, "返金予定日"
+        = f.date_field :repayment_day
+      div.flex.justify-between.m-7.items-center
+        = f.label :notes, "備考"
+        = f.text_area :notes
+      div.flex.justify-end
+        = f.submit :更新, class: 'm-3 py-2 px-3 bg-gradient-to-r from-teal-400 to-lime-400 rounded-lg text-white hover:text-green-500 cursor-pointer transition-all duration-400'
+        -if params[:id] != nil
+          = button_to '削除する', memo_path(memo), form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete, class: 'm-3 py-2 px-3 bg-gradient-to-r from-orange-400 to-rose-400 rounded-lg text-white hover:text-red-500 cursor-pointer transition-all duration-400'
