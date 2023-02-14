@@ -1,19 +1,51 @@
-p.text-3xl.text-center.font-bold
-  | 新規登録 
-  br
-= form_with model: @user, local: true do |f|
-  ul 
-    li
-      = f.label :name, "名前"
-      = f.text_field :name
-    li
-      = f.label :email, "メールアドレス"
-      = f.text_field :email
-    li
-      = f.label :password, "パスワード"
-      = f.text_field :password
-    li
-      = f.label :password_confirmation, "確認用パスワード"
-      = f.text_field :password_confirmation
-    li
-      = f.submit :登録
+div.h-screen.w-screen.flex.justify-center.items-center
+  div.px-8.py-3.rounded.border.w-96
+    div.flex.flex-col.items-center.justify-center.mb-4
+      h2.text-2xl.font-bold ログイン
+
+    = form_with model: @user, local: true do |f|
+      div.flex.flex-col.my-3
+        = f.label :name, "名前"
+        = f.text_field :name
+      div.flex.flex-col.my-3
+        = f.label :email, "メールアドレス"
+        = f.text_field :email
+      div.flex.flex-col.my-3
+        = f.label :password, "パスワード"
+        = f.text_field :password
+      div.flex.flex-col.my-3
+        = f.label :password_confirmation, "パスワード確認用"
+        = f.text_field :password_confirmation
+      div.flex.flex-col.items-center.justify-center.my-4
+        = f.submit :登録, class: 'my-3 py-1 w-full rounded bg-blue-600 text-white'
+
+
+
+
+
+
+
+
+
+
+
+
+/ p.text-3xl.text-center.font-bold
+/   | 新規登録 
+/   br
+/ = form_with model: @user, local: true do |f|
+/   ul 
+/     li
+/       = f.label :name, "名前"
+/       = f.text_field :name
+/     li
+/       = f.label :email, "メールアドレス"
+/       = f.text_field :email
+/     li
+/       = f.label :password, "パスワード"
+/       = f.text_field :password
+/     li
+/       = f.label :password_confirmation, "確認用パスワード"
+/       = f.text_field :password_confirmation
+/     li
+/       = f.submit :登録
