@@ -16,7 +16,7 @@ tbody.text-gray-600.text-sm.font-light
         = memo.repayment_day
     td.py-3.px-6.text-center
       div.flex.item-center.justify-center.py-2.px-0.5.rounded-lg.bg-gradient-to-r.from-teal-400.to-lime-400.text-white.hover:text-green-500.transition-all.duration-300.cursor-pointer.drop-shadow-lg
-        = link_to '詳細', memo_path(memo)
+        = link_to '詳細', edit_memo_path(memo)
     td.py-3.px-6.text-center
       div.flex.item-center.justify-center.py-2.px-0.5.rounded-lg.bg-gradient-to-r.from-orange-400.to-rose-400.text-white.hover:text-red-500.transition-all.duration-300.cursor-pointer.drop-shadow-lg
-        = button_to '削除', memo_path(memo)
+        = button_to '削除', memo_path(memo), method: :delete

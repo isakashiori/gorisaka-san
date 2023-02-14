@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_114757) do
   create_table "memos", force: :cascade do |t|
     t.string "borrower_name"
     t.integer "money_amount"
-    t.string "repayment_day"
-    t.string "lended_day"
+    t.date "repayment_day"
+    t.date "lended_day"
     t.string "notes"
     t.integer "user_id", null: false
     t.datetime "created_at", null: false

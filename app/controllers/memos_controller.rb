@@ -18,6 +18,7 @@ class MemosController < ApplicationController
     @memos = current_user.memos.includes(:user).order(created_at: :desc)
   end
   
+
   def edit; end
 
   def update
