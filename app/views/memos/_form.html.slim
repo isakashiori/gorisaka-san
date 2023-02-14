@@ -19,6 +19,6 @@ div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.flex.justify-ce
         = f.text_area :notes
       div.flex.justify-end
         = f.submit :更新, class: 'm-3 py-2 px-3 bg-gradient-to-r from-teal-400 to-lime-400 rounded-lg text-white hover:text-green-500 cursor-pointer transition-all duration-400'
-
-  -if params[:id] != nil
-    = button_to '削除する', memo_path(memo), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class: 'm-3 py-2 px-3 bg-gradient-to-r from-orange-400 to-rose-400 rounded-lg text-white hover:text-red-500 cursor-pointer transition-all duration-400'
+  / div
+  / -if params[:id] != nil
+  /   = button_to '削除する', memo_path(memo), method: :delete, form: { data: { turbo_confirm: "Are you sure?" } }, class: 'm-3 py-2 px-3 bg-gradient-to-r from-orange-400 to-rose-400 rounded-lg text-white hover:text-red-500 cursor-pointer transition-all duration-400'
