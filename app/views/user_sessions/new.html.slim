@@ -12,3 +12,7 @@ div.h-screen.w-screen.flex.justify-center.items-center
         = f.text_field :password
       div.flex.flex-col.items-center.justify-center.my-3
         = f.submit :ログイン, class: 'my-3 py-1 w-full rounded bg-blue-600 text-white'
+    div.flex.flex-col.items-center.justify-center
+      p or
+    div.flex.flex-col.items-center.justify-center
+      = button_to 'ゲストログイン', guest_login_path, method: :post, class: 'text-blue-300 my-2 hover:text-blue-400 transition-all duration-300'
