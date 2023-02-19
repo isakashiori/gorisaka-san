@@ -6,10 +6,10 @@ div.h-screen.w-screen.flex.justify-center.items-center
     = form_with url: login_path, local: true do |f|
       div.flex.flex-col.my-2
         = f.label :email, "メールアドレス"
-        = f.text_field :email
+        = f.email_field :email
       div.flex.flex-col.my-2
         = f.label :password, "パスワード"
-        = f.text_field :password
+        = f.password_field :password
       div.flex.flex-col.items-center.justify-center.my-3
         = f.submit :ログイン, class: 'my-3 py-1 w-full rounded bg-blue-600 text-white'
     div.flex.flex-col.items-center.justify-center
