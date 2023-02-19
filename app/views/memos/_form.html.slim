@@ -7,7 +7,7 @@ div.container.mx-auto.rounded.border-2.border-gray-200.shadow-md.flex.justify-ce
         = f.text_field :borrower_name
       div.flex.justify-between.m-7.items-center
         = f.label :money_amount, "借した金額の合計"
-        = f.text_field :money_amount
+        = f.number_field :money_amount
       div.flex.justify-between.m-7.items-center
         = f.label :lended_day, "借した日"
         = f.date_field :lended_day
