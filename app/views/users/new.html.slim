@@ -9,13 +9,13 @@ div.h-screen.w-screen.flex.justify-center.items-center
         = f.text_field :name
       div.flex.flex-col.my-3
         = f.label :email, "メールアドレス"
-        = f.text_field :email
+        = f.email_field :email
       div.flex.flex-col.my-3
         = f.label :password, "パスワード"
-        = f.text_field :password
+        = f.password_field :password
       div.flex.flex-col.my-3
         = f.label :password_confirmation, "パスワード確認用"
-        = f.text_field :password_confirmation
+        = f.password_field :password_confirmation
       div.flex.flex-col.items-center.justify-center.my-4
         = f.submit :登録, class: 'my-3 py-1 w-full rounded bg-blue-600 text-white'
 
