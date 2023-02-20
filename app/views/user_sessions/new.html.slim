@@ -6,7 +6,10 @@ div.h-screen.w-screen.flex.justify-center.items-center
     = form_with url: login_path, local: true do |f|
       div.flex.flex-col.my-2
         = f.label :email, "メールアドレス"
-        = f.email_field :email
+        = f.email_field :email, class: 'peer'
+        p.mt-2.invisible.peer-required:visible.text-pink-600.text-sm
+          |
+            メールアドレスを入力してください
       div.flex.flex-col.my-2
         = f.label :password, "パスワード"
         = f.password_field :password
