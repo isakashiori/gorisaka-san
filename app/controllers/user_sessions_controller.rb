@@ -11,7 +11,7 @@ class UserSessionsController < ApplicationController
     password_confirmation: password
     )
     auto_login(guest_user)
-    redirect_to root_path
+    redirect_to root_path, success: 'ゲストログインしました'
   end
 
   def create
