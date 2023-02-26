@@ -1,5 +1,10 @@
 - flash.each do |message_type, message|
   - if message_type == 'success'
     div.alert.alert-success.shadow-lg
-      span ゲストログインしました!
+      span 
+        = message
+  - elsif message_type == 'error'
+    div.alert.alert-error.shadow-lg
+      span 
+        = message
 
