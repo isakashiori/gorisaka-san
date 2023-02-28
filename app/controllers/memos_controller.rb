@@ -16,7 +16,8 @@ class MemosController < ApplicationController
   end
 
   def index
-    @memos = current_user.memos.includes(:user).order(created_at: :desc)
+    @q = current_user.memos.ransack(params[:q])
+    @memos = @q.result(distinct: true).includes(:user).order(created_at: :desc)
   end
   
 

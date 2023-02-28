@@ -1,0 +1,3 @@
+= search_form_for @q, url: url do |f|
+  = f.search_field :borrower_name_cont, placeholder: '貸した相手の名前'
+  = f.submit :検索
