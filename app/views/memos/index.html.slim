@@ -1,5 +1,6 @@
-div.min-w-screen.flex.items-center.justify-center
+div.min-w-screen.flex.items-center.justify-center.relative
   = render 'search_form', url: memos_path
+  = link_to 'お金管理に戻る',new_memo_path, class: 'absolute right-0 mr-36 btn btn-info opacity-70'
 
 - if @memos.present?
   div.overflow-x-auto
