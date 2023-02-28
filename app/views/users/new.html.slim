@@ -1,7 +1,7 @@
 div.h-screen.w-screen.flex.justify-center.items-center
   div.px-8.py-3.rounded.border.w-96
     div.flex.flex-col.items-center.justify-center.mb-4
-      h2.text-2xl.font-bold ログイン
+      h2.text-2xl.font-bold 新規登録
 
     = form_with model: @user, local: true do |f|
       div.flex.flex-col.my-3
@@ -17,4 +17,4 @@ div.h-screen.w-screen.flex.justify-center.items-center
         = f.label :password_confirmation, "パスワード確認用"
         = f.password_field :password_confirmation
       div.flex.flex-col.items-center.justify-center.my-4
-        = f.submit :登録, class: 'my-3 py-1 w-full rounded bg-blue-600 text-white'
+        = f.submit :登録, class: 'btn btn-outline btn-info'

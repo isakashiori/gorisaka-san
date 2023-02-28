@@ -1,10 +1,10 @@
 - flash.each do |message_type, message|
   - if message_type == 'success'
-    div.alert.alert-success.shadow-lg
+    div.alert.alert-success.shadow-lg.opacity-75
       span 
         = message
   - elsif message_type == 'error'
-    div.alert.alert-error.shadow-lg
+    div.alert.alert-error.shadow-lg.opacity-75
       span 
         = message
 
