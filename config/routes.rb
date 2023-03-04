@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'static_pages#top'
   get 'about', to: 'static_pages#about'
+  get 'mypage', to: 'static_pages#mypage'
   post 'callback', to: 'linebots#callback'
 
   get 'login', to: 'user_sessions#new'

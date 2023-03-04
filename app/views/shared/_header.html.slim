@@ -5,5 +5,5 @@ header.p-4.sticky.top-0
         = image_tag 'logo.png'
     div.md: ml-auto.flex.flex-wrap.items-center.text-base.justify-center.font-bold
       = link_to 'アプリについて', about_path, class: 'mr-5 hover:text-sky-600 transition-all duration-300'
-      = link_to 'マイページ', '#', class: 'mr-5 hover:text-sky-600 transition-all duration-300'
+      = link_to 'マイページ', mypage_path, class: 'mr-5 hover:text-sky-600 transition-all duration-300'
       = button_to 'ログアウト', logout_path, method: :delete, class: 'mr-5 hover:text-sky-600 transition-all duration-300'
