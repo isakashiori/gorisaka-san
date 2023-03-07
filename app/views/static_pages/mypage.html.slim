@@ -9,4 +9,13 @@ div.h-screen.flex.items-end.justify-end.px-4.pb-6
       div.flex.items-center.gap-4.pb-4
         = link_to root_path do 
           = image_tag 'logo.png'
+      div.mt-4.-mx-4.relative.overflow-y-auto.overflow-x-hidden.h-[85vh]
+        span.uppercase.px-4.text-gray-500 menu
+        ul.space-y-4.mb-12.px-4.mt-8
+          li 
+            = link_to 'お金の管理メモを作成', new_memo_path, class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
+          li 
+            = link_to 'お金の管理メモ一覧', memos_path, class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
+          li 
+            = link_to 'LINEで催促', '#', class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
   div.z-10.lg:hidden.fixed.top-0.left-0.w-screen.h-screen.bg-gray-900.bg-opacity-30.opacity-0.peer-focus:opacity-100.peer-transition.duration-200
