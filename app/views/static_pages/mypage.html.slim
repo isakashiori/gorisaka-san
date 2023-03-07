@@ -1,0 +1,21 @@
+div.h-screen.flex.items-end.justify-end.px-4.pb-6
+  button.relative.z-30.lg:hidden.peer.h-14.w-14.rounded-full.bg-cyan-500.hover:bg-cyan-600.active:bg-cyan-700.transition
+    span.text-white
+      svg.w-6.m-auto xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16"
+        path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+        path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+  div.z-20.fixed.top-0.-left-96.lg:left-0.h-screen.w-9/12.lg:w-72.bg-white.shadow-2xl.peer-focus:left-0.peer-transition.ease-out.delay-150.duration-200
+    nav.p-6 role="navigation"
+      div.flex.items-center.gap-4.pb-4
+        = link_to root_path do 
+          = image_tag 'logo.png'
+      div.mt-4.-mx-4.relative.overflow-y-auto.overflow-x-hidden.h-[85vh]
+        span.uppercase.px-4.text-gray-500 menu
+        ul.space-y-4.mb-12.px-4.mt-8
+          li 
+            = link_to 'お金の管理メモを作成', new_memo_path, class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
+          li 
+            = link_to 'お金の管理メモ一覧', memos_path, class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
+          li 
+            = link_to 'LINEで催促', '#', class: 'flex gap-4 text-gray-600 hover:text-gray-800 transition'
+  div.z-10.lg:hidden.fixed.top-0.left-0.w-screen.h-screen.bg-gray-900.bg-opacity-30.opacity-0.peer-focus:opacity-100.peer-transition.duration-200
